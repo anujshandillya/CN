@@ -31,21 +31,30 @@ void deliverData() {
     printf("Receiver: Delivering data to network layer\n");
 }
 
+bool Event(char ch) {
+    if(ch=='R') {
+        return true;
+    }else if(ch=='A') {
+        return false;
+    }
+}
+
 int main() {
-    bool isSender = true;
+    char noti = 'R';
 
     while (true) {
         if (waitForEvent()) {
-            if (isSender) {
+            if (Event(noti)) {
                 getData();
                 makeFrame();
                 sendFrame();
+                noti='A';
             } else {
                 receiveFrame();
                 extractData();
                 deliverData();
+                noti='R';
             }
-            isSender = !isSender;
         }
     }
     return 0;
