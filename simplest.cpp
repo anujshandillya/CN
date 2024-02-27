@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <stdbool.h>
+#include <bits/stdc++.h>
 #include <unistd.h>
+
+using namespace std;
 
 bool waitForEvent() {
     sleep(1);
@@ -8,27 +9,33 @@ bool waitForEvent() {
 }
 
 void sendFrame() {
-    printf("Sender: Sending frame\n");
+    cout<<"Sender: Sending frame\n";
+    // printf();
 }
 
 void getData() {
-    printf("Sender: Getting data\n");
+    cout<<"Sender: Getting data\n";
+    // printf();
 }
 
 void makeFrame() {
-    printf("Sender: Making frame\n");
+    cout<<"Sender: Making frame\n";
+    // printf();
 }
 
 void receiveFrame() {
-    printf("Receiver: Receiving frame\n");
+    cout<<"Receiver: Receiving frame\n";
+    // printf("Receiver: Receiving frame\n");
 }
 
 void extractData() {
-    printf("Receiver: Extracting data\n");
+    cout<<"Receiver: Extracting data\n";
+    // printf("Receiver: Extracting data\n");
 }
 
 void deliverData() {
-    printf("Receiver: Delivering data to network layer\n");
+    cout<<"Receiver: Delivering data to network layer\n";
+    // printf("Receiver: Delivering data to network layer\n");
 }
 
 bool Event(char ch) {
